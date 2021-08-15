@@ -1,0 +1,20 @@
+import { ActionType } from "../action-types";
+
+interface SearchRepoAction {
+  type: ActionType.SEARCH_REPO;
+}
+
+interface SeachRepoSuccessAction {
+  type: ActionType.SEARCH_REPO_SUCCESS;
+  payload: string[];
+}
+
+interface SearchRepoErrorAction {
+  type: ActionType.SEARCH_REPO_ERROR;
+  payload: string;
+}
+
+export type Action =
+  | SearchRepoAction
+  | SeachRepoSuccessAction
+  | SearchRepoErrorAction;
